@@ -1,12 +1,6 @@
 attrs==15.2.0
 autobahn==0.10.3
 beautifulsoup4==4.4.1
-binwalk===2.1.2-g055aaae
-catkin-pkg==0.3.6
-catkin-pkg-modules==0.3.6
-chardet==2.3.0
-cryptography==1.2.3
-cycler==0.9.0
 decorator==4.0.6
 defusedxml==0.4.1
 distorm3==3.3.0
@@ -52,12 +46,6 @@ python-lzo==1.8
 python-snappy==0.5
 pytz==2014.10
 PyYAML==3.11
-roman==2.0.0
-rosdep==0.11.8
-rosdistro==0.6.2
-rosdistro-modules==0.6.2
-rospkg==1.1.2
-rospkg-modules==1.1.2
 scipy==0.17.0
 service-identity==16.0.0
 six==1.10.0
@@ -65,5 +53,4 @@ trollius==2.0.1
 Twisted==16.0.0
 txaio==1.0.0
 volatility==2.5
-yara-python==3.4.0
 zope.interface==4.1.3
