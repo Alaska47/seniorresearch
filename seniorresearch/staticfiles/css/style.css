@@ -9259,6 +9259,11 @@ nav.n ul a:hover {
 #implode-intro .phone-preview-sizer.scrollmagic-end {
     right: calc(((100% - 400px) / 2) - 100px)
 }
+
+#logo-container {
+    transition: opacity 0.25s ease-in-out;
+}
+
 .v {
     position: relative;
     padding: 0px 0;

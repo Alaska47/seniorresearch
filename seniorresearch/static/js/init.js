@@ -17,7 +17,43 @@ window.onload = function(){
 };
 */
 
+function moveDescription() {
+  fade_out();
+  $.fn.fullpage.moveTo(windowTitles.indexOf("Description")+1);
+}
+
+function moveDetails() {
+  fade_out();
+  $.fn.fullpage.moveTo(windowTitles.indexOf("Details")+1);
+}
+
+function moveComponents() {
+  fade_out();
+  $.fn.fullpage.moveTo(windowTitles.indexOf("Components")+1);
+}
+
+function moveCode() {
+  fade_out();
+  $.fn.fullpage.moveTo(windowTitles.indexOf("Code")+1);
+}
+
+function moveLogs() {
+  fade_out();
+  $.fn.fullpage.moveTo(windowTitles.indexOf("Logs")+1);
+}
+
+function moveDiscussion() {
+  fade_out();
+  $.fn.fullpage.moveTo(windowTitles.indexOf("Discussion")+1);
+}
+
+function moveGallery() {
+  fade_out();
+  $.fn.fullpage.moveTo(windowTitles.indexOf("Gallery")+1);
+}
+
 $(document).ready(function() {
+  $('.slider').slider();
   $('#fullpage').fullpage({
     scrollBar: false,
     afterLoad: function(anchorLink, index){
@@ -93,13 +129,18 @@ $(document).ready(function() {
   });
 });
 
-function go_down() {
+function fade_out() {
   $('#logo-container').css('opacity', '0');
   setTimeout(function() {
     $('#logo-container').css('display', 'none');
   },500);
   console.log("fade out");
+}
 
+function go_down() {
+
+  fade_out();
   $.fn.fullpage.moveSectionDown();
     //indexModifier = 1;
   }
+

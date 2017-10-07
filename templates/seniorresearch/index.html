@@ -16,251 +16,209 @@
 
 </head>
 <body>
-<!--
-	<nav id="main_nav" class="n fq" role="navigation">
-		<div class="nav-wrapper container"><a id="logo-container" href="#" style="margin-left: -15%; " class="brand-logo">Senior Research</a>
-			<div class="nav" style="margin-right: -15%;">
-				<ul class="right hide-on-med-and-down">
-					<li><a href="#">Gallery</a></li>
-				</ul>
+	<!-- Navbar -->
+	<nav class="n fq" id="nav">
+		<div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Senior Research</a>
 
-				<ul id="nav-mobile" class="side-nav">
-					<li><a href="#">Gallery</a></li>
-					<li><a href="#">Discussion</a></li>
-				</ul>
+			<ul id="nav-mobile" class="ag hide-on-med-and-down">
+				<li><a id="Description" onClick="moveDescription();" href="javascript:;">Description</a></li>
+				<li><a id="Details" onClick="moveDetails();" href="javascript:;">Details</a></li>
+				<li><a id="Components" onClick="moveComponents();" href="javascript:;">Components</a></li>
+				<li><a id="Code" onClick="moveCode();" href="javascript:;">Code</a></li>
+				<li><a id="Logs" onClick="moveLogs();" href="javascript:;">Logs</a></li>
+				<li><a id="Discussion" onClick="moveDiscussion();" href="javascript:;">Discussion</a></li>
+				<li><a id="Gallery" onClick="moveGallery();" href="javascript:;">Gallery</a></li>
+			</ul>
 
-				<ul class="right hide-on-med-and-down">
-					<li><a href="#">Discussion</a></li>
-				</ul>
-
-				<ul id="nav-mobile" class="side-nav">
-					<li><a href="#">Discussion</a></li>
-				</ul>
-
-				<ul class="right hide-on-med-and-down">
-					<li><a href="#">Logs</a></li>
-				</ul>
-
-				<ul id="nav-mobile" class="side-nav">
-					<li><a href="#">Logs</a></li>
-				</ul>
-
-				<ul class="right hide-on-med-and-down">
-					<li><a href="#">Code</a></li>
-				</ul>
-
-				<ul id="nav-mobile" class="side-nav">
-					<li><a href="#">Code</a></li>
-				</ul>
-
-				<ul class="right hide-on-med-and-down">
-					<li><a href="#">Components</a></li>
-				</ul>
-
-				<ul id="nav-mobile" class="side-nav">
-					<li><a href="#">Components</a></li>
-				</ul>
-
-				<ul class="right hide-on-med-and-down">
-					<li><a href="#">Details</a></li>
-				</ul>
-
-				<ul id="nav-mobile" class="side-nav">
-					<li><a href="#">Details</a></li>
-				</ul>
-
-				<ul class="right hide-on-med-and-down">
-					<li><a href="#">Description</a></li>
-				</ul>
-
-				<ul id="nav-mobile" class="side-nav">
-					<li><a href="#">Description</a></li>
-				</ul>
-				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-			</div>
+			<a href="#" data-activates="slide-out" class="button-collapse ag"><i class="material-icons white-text">menu</i></a>
 		</div>
 	</nav>
--->
-<!-- Navbar -->
-<nav class="n fq" id="nav">
-	<div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Senior Research</a>
-		
-		<ul id="nav-mobile" class="ag hide-on-med-and-down">
-			<li><a href="#Description">Description</a></li>
-			<li><a href="#Details">Details</a></li>
-			<li><a href="#Components">Components</a></li>
-			<li><a href="#Code">Code</a></li>
-			<li><a href="#Logs">Logs</a></li>
-			<li><a href="#Discussion">Discussion</a></li>
-			<li><a href="#Gallery">Gallery</a></li>
-		</ul>
-
-		<a href="#" data-activates="slide-out" class="button-collapse ag"><i class="material-icons white-text">menu</i></a>
-	</div>
-</nav>
-<ul id="slide-out" class="side-nav">
-	<li><a class="waves-effect waves-teal" href="#">Description</a></li>
-	<li><a class="waves-effect waves-teal" href="#">Details</a></li>
-	<li><a class="waves-effect waves-teal" href="#">Components</a></li>
-	<li><a class="waves-effect waves-teal" href="#">Code</a></li>
-	<li><a class="waves-effect waves-teal" href="#">Logs</a></li>
-	<li><a class="waves-effect waves-teal" href="#">Discussion</a></li>
-	<li><a class="waves-effect waves-teal" href="#">Gallery</a></li>
-</ul>
+	<ul id="slide-out" class="side-nav">
+		<li><a class="waves-effect waves-teal" href="#">Description</a></li>
+		<li><a class="waves-effect waves-teal" href="#">Details</a></li>
+		<li><a class="waves-effect waves-teal" href="#">Components</a></li>
+		<li><a class="waves-effect waves-teal" href="#">Code</a></li>
+		<li><a class="waves-effect waves-teal" href="#">Logs</a></li>
+		<li><a class="waves-effect waves-teal" href="#">Discussion</a></li>
+		<li><a class="waves-effect waves-teal" href="#">Gallery</a></li>
+	</ul>
 
 
-<div id="fullpage">
-	<div class="v ai section active" >
-		<img class="bz" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/trees.jpg?7692775147011696650" alt="">
-		<div class="header-wrapper c valign-wrapper">
-			<div class="d iv">
-				<h1>Welcome!</h1>
-				<span class="dx">to my Senior Research Project Website...</span>
-				<button onclick="go_down()" class=""><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+	<div id="fullpage">
+		<div class="v ai section active" >
+			<img class="bz" src="{% static 'images/trees.jpg' %}" alt="">
+			<div class="header-wrapper c valign-wrapper">
+				<div class="d iv">
+					<h1>Welcome!</h1>
+					<span class="dx">to my Senior Research Project Website...</span>
+					<button onclick="go_down()" class=""><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="v valign-wrapper section" >
-		<div class="dv">
-			<div class="c">
-				<div class="d iv"><h2 class="section-title">Description</h2></div>
-				<div class="container">
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
+		<div class="v valign-wrapper section" >
+			<div class="dv">
+				<div class="c">
+					<div class="d iv"><h2 class="section-title">Description</h2></div>
+					<div class="container">
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="v r valign-wrapper section" >
+			<div class="dv">
+				<div class="c">
+					<div class="d iv"><h2 class="section-title">Details</h2></div>
+					<div class="container">
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="v valign-wrapper section" >
+			<div class="dv">
+				<div class="c">
+					<div class="d iv"><h2 class="section-title">Components</h2></div>
+					<div class="container">
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="v r valign-wrapper section" >
+			<div class="dv">
+				<div class="c">
+					<div class="d iv"><h2 class="section-title">Code</h2></div>
+					<div class="container">
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="v valign-wrapper section" >
+			<div class="dv">
+				<div class="c">
+					<div class="d iv"><h2 class="section-title">Logs</h2></div>
+					<div class="container">
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="v r valign-wrapper section" >
+			<div class="dv">
+				<div class="c">
+					<div class="d iv"><h2 class="section-title">Discussion</h2></div>
+					<div class="container">
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+						<p>Some randoms stuff about my project</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="v valign-wrapper section" >
+			<div class="dv">
+				<div class="c">
+					<div class="d iv"><h2 class="section-title">Gallery</h2>
+						<div class="">
+							<div class="slider">
+								<ul class="slides">
+									<li>
+										<img src="http://cdn.wonderfulengineering.com/wp-content/uploads/2014/03/high-resolution-wallpapers-25.jpg"> <!-- random image -->
+										<div class="caption center-align">
+											<h3>This is our big Tagline!</h3>
+											<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+										</div>
+									</li>
+									<li>
+										<img src="http://www.qygjxz.com/data/out/109/4447677-high-resolution-pictures.jpeg"> <!-- random image -->
+										<div class="caption left-align">
+											<h3>Left Aligned Caption</h3>
+											<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+										</div>
+									</li>
+									<li>
+										<img src="http://ahdzbook.com/data/out/109/hdwp695644424.jpg"> <!-- random image -->
+										<div class="caption right-align">
+											<h3>Right Aligned Caption</h3>
+											<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+										</div>
+									</li>
+									<li>
+										<img src="https://livewallpaper.info/wp-content/uploads/2016/11/wallpapers-High-Resolution-Download7.jpg"> <!-- random image -->
+										<div class="caption center-align">
+											<h3>This is our big Tagline!</h3>
+											<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="v r valign-wrapper section" >
-		<div class="dv">
-			<div class="c">
-				<div class="d iv"><h2 class="section-title">Details</h2></div>
-				<div class="container">
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="v valign-wrapper section" >
-		<div class="dv">
-			<div class="c">
-				<div class="d iv"><h2 class="section-title">Components</h2></div>
-				<div class="container">
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="v r valign-wrapper section" >
-		<div class="dv">
-			<div class="c">
-				<div class="d iv"><h2 class="section-title">Code</h2></div>
-				<div class="container">
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="v valign-wrapper section" >
-		<div class="dv">
-			<div class="c">
-				<div class="d iv"><h2 class="section-title">Logs</h2></div>
-				<div class="container">
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="v r valign-wrapper section" >
-		<div class="dv">
-			<div class="c">
-				<div class="d iv"><h2 class="section-title">Discussion</h2></div>
-				<div class="container">
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="v valign-wrapper section" >
-		<div class="dv">
-			<div class="c">
-				<div class="d iv"><h2 class="section-title">Gallery</h2></div>
-				<div class="container">
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-					<p>Some randoms stuff about my project</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 <!--
 <footer class="page-footer">
@@ -276,7 +234,7 @@
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/startup-all-min.js?7692775147011696650" crossorigin="anonymous"></script>
+<script src="{% static 'js/startup-all-min.js' %}"></script>
 <script src="{% static 'js/jquery.fullPage.min.js' %}"></script>
 <script src="{% static 'js/jquery.slimscroll.min.js' %}"></script>
 <script src="{% static 'js/materialize.js' %}"></script>

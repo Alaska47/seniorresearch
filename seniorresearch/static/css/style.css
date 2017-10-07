@@ -9252,6 +9252,12 @@ nav.n ul a:hover {
 #implode-intro .tablet-preview-sizer.scrollmagic-end {
     left: calc(((100% - 400px) / 2) - 200px)
 }
+
+.slider .slides li img {
+    background-size:100% auto;
+    background-repeat: no-repeat;
+}
+
 #implode-intro .phone-preview-sizer {
     right: -1000px;
     width: 50px
