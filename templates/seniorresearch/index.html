@@ -1,199 +1,217 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load markup_tags %}
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-	<title></title>
-	<script src="https://use.fontawesome.com/924b7ddb50.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>Aneesh Kotnana</title>
 	<!-- CSS  -->
-	<link href="{% static 'css/jquery.fullPage.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
-	
-	
-
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+	<link href="{% static 'images/favicon.ico' %}" rel="icon" type="image/x-icon" />
 </head>
-<body>
-	<!-- Navbar -->
-	<nav class="n fq" id="nav">
-		<div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Senior Research</a>
+<body class="test">
 
-			<ul id="nav-mobile" class="ag hide-on-med-and-down">
-				<li><a id="Description" onClick="moveDescription();" href="javascript:;">Description</a></li>
-				<li><a id="Details" onClick="moveDetails();" href="javascript:;">Details</a></li>
-				<li><a id="Components" onClick="moveComponents();" href="javascript:;">Components</a></li>
-				<li><a id="Code" onClick="moveCode();" href="javascript:;">Code</a></li>
-				<li><a id="Logs" onClick="moveLogs();" href="javascript:;">Logs</a></li>
-				<li><a id="Discussion" onClick="moveDiscussion();" href="javascript:;">Discussion</a></li>
-				<li><a id="Gallery" onClick="moveGallery();" href="javascript:;">Gallery</a></li>
-			</ul>
+	<div id="overlay-back"></div> 
+	<header class="header banner indigo z-depth-1">
+		<img src="{% static 'images/image.png' %}" alt="" class="responsive-img">
+		<h1 style="font-size: 32px;">3D Area Mapping and Pathfinding using Autonomous Swarm Robots</h1>
 
-			<a href="#" data-activates="slide-out" class="button-collapse ag"><i class="material-icons white-text">menu</i></a>
-		</div>
-	</nav>
-	<ul id="slide-out" class="side-nav">
-		<li><a class="waves-effect waves-teal" href="#">Description</a></li>
-		<li><a class="waves-effect waves-teal" href="#">Details</a></li>
-		<li><a class="waves-effect waves-teal" href="#">Components</a></li>
-		<li><a class="waves-effect waves-teal" href="#">Code</a></li>
-		<li><a class="waves-effect waves-teal" href="#">Logs</a></li>
-		<li><a class="waves-effect waves-teal" href="#">Discussion</a></li>
-		<li><a class="waves-effect waves-teal" href="#">Gallery</a></li>
-	</ul>
+		<p>Aneesh Kotnana (Automation and Robotics Lab) and Neil Thistlethwaite (Computer Systems Lab)</p>
+	</header>
+	<main>
+		<div class="row">
+            	<!--
+                <div class="col hide-on-small-only m3 l2">
+                    <div class="toc-wrapper">
+                        <div style="position: relative; height: 1px">
+                            <ul class="section table-of-contents">
+                                <li><a href="#description">Description</a></li>
+                                <li><a href="#details">Details</a></li>
+                                <li><a href="#components">Components</a></li>
+                                <li><a href="#code">Code</a></li>
+                                <li><a href="#logs">Logs</a></li>
+                                <li><a href="#gallery">Gallery</a></li>
+                                <li><a href="#discussion">Discussion</a></li>
+                                <li><a href="#contact">Contact Me</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            -->
+            <div class="toc-wrapper">
+            	<div style="height: 1px;">
+            		<ul class="section table-of-contents">
+            			<li><a href="#description">Description</a></li>
+            			<li><a href="#details">Details</a></li>
+            			<li><a href="#components">Components</a></li>
+            			<li><a href="#code">Code</a></li>
+            			<li><a href="#logs">Logs</a></li>
+            			<li><a href="#gallery">Gallery</a></li>
+            			<li><a href="#discussion">Discussion</a></li>
+            		</ul>
+            	</div>
+            </div>
+
+            <div class="col s12 m9 offset-m3 l10 offset-l2">
+            	<div id="description" class="section scrollspy" style="margin-right: 2em">
+            		<h2 class="header indigo-text lighten-1 section-title">
+            			<span>Description</span>
+            		</h2>
+            		<p class="flow-text">
+            			&emsp;Automated area mapping has been a subject of intense robotic research for years, given its real-world applications in problems such as robotic search-and-rescue and exploration of areas unsafe for humans. Currently, much research has been conducted on 2D and 3D area mapping in single robot systems, but one area specifically that has not been researched much is the use of multiple robots in the automated 3D mapping problem - a swarm robotics approach.
+            		</p>
+            		<p class="flow-text">
+            			&emsp;For my project, I will create three small, mobile swarm robots and equip them with stereo vision cameras, with Raspberry Pis serving as the secondary control system and managing and processing the output from the cameras. Communication with the Raspberry Pis will be established using a local area network (LAN) created from a router. A central processing system will aggregate all the data from the Raspberry Pis. Ultimately, the goal is to create software that will efficiently navigate the robots through an area and map a 3D field representation of the area.
+            		</p>
+            	</div>
 
 
-	<div id="fullpage">
-		<div class="v ai section active" >
-			<img class="bz" src="{% static 'images/trees.jpg' %}" alt="">
-			<div class="header-wrapper c valign-wrapper">
-				<div class="d iv">
-					<h1>Welcome!</h1>
-					<span class="dx">to my Senior Research Project Website...</span>
-					<button onclick="go_down()" class=""><i class="fa fa-caret-down" aria-hidden="true"></i></button>
-				</div>
-			</div>
-		</div>
 
-		<div class="v valign-wrapper section" >
-			<div class="dv">
-				<div class="c">
-					<div class="d iv"><h2 class="section-title">Description</h2></div>
-					<div class="container">
-						<p style="font-size: 16px;">Automated area mapping has been a subject of intense robotic research for years, given its real-world applications in problems such as robotic search-and-rescue and exploration of areas unsafe for humans. Currently, much research has been conducted on 2D and 3D area mapping in single robot systems, but one area specifically that has not been researched much is the use of multiple robots in the automated 3D mapping problem - a swarm robotics approach. My senior research project concerns 3D Area Mapping and Pathfinding using Autonomous Swarm Robots</p>
-						<p style="font-size: 16px;">For my project, I will create three small, mobile swarm robots and equip them with stereo vision cameras, with Raspberry Pis serving as the secondary control system and managing and processing the output from the cameras. Communication with the Raspberry Pis will be established using a local area network (LAN) created from a router. A central processing system will aggregate all the data from the Raspberry Pis. Ultimately, the goal is to create software that will efficiently navigate the robots through an area and map a 3D field representation of the area. </p>
-					</div>
-				</div>
-			</div>
-		</div>
+            	<div id="details" class="section scrollspy" style="margin-right: 2em">
 
-		<div class="v valign-wrapper section" >
-			<div class="dv">
-				<div class="c">
-					<div class="d iv"><h2 class="section-title">Details</h2></div>
-					<div class="container">
-						<h4>Initial sketches</h4>
-						<img class="materialboxed" src="{% static 'images/initialSketches.png' %}" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
+            		<h2 class="header indigo-text lighten-1 section-title">
+            			<span>Details</span>
+            		</h2>
 
-		<div class="v valign-wrapper section" >
-			<div class="dv">
-				<div class="c">
-					<div class="d iv"><h2 class="section-title">Components</h2></div>
-					<div class="container">
-						<div class="collection">
-							<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Arducam Multi Camera Module (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$149.97</a></div></ul>
-							<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi Camera Module V2 (x6)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$149.94</a></div></ul>
-							<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$89.85</a></div></ul>
-							<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Logisaf 24 Circuit Slip Ring (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$74.97</a></div></ul>
-							<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Aibocn Mini Power Bank (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$29.99</a></div></ul>
-							<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi Flex Cable 4" (x6)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$11.70</a></div></ul>
-							<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">TE Connectivity AMP Connector BOTTOM (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$6.96</a></div></ul>
-							<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">TE Connectivity AMP Connector TOP (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$2.61</a></div></ul>							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+            		<h5 class="header indigo-text darken-3 center" style="font-size: 24px;">Initial sketches</h5>
+            		<img class="container materialboxed" src="{% static 'images/initialSketches.png' %}" alt="">
+            	</div>
 
-		<div class="v valign-wrapper section" >
-			<div class="dv">
-				<div class="c">
-					<div class="d iv"><h2 class="section-title">Code</h2></div>
-					<div class="container">
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="v valign-wrapper section" >
-			<div class="dv">
-				<div class="">
-					<div class="d iv"><h2 class="section-title">Logs</h2></div>
-					<div class="container">
-						<ul class="collapsible collapsible-accordion" data-collapsible="accordion" >
-							<li>
-								<div class="collapsible-header" style="color:#000000;">Progress Report: 10/30-11/3</div>
-								<div class="collapsible-body" style="margin-top: -3em; margin-bottom: -3em">
-									<p>I worked on updating the website, added a gallery, and a discussion page. I began working on CAD drawing. I created "floor plan" for the robot in terms of where things will go (i.e battery, RPi, breadboard, PCB, Arduino?)<br>Remaining parts list<br>&emsp;&bull;&nbsp;everything for 2nd and 3rd robots<br>Still waiting on parts. Once the parts arrive, I will be able to construct 1 robot. If that robot works well and all the parts work without any problems, I can order the remaining parts.<br>Food for thought: How can I control stepper motors, dc motors, and servos with solely a Raspberry Pi?<br>
-										&emsp;&bull;&nbsp;Utilize H-bridges and other driver chips. Benefits include being able to communicate with motors directly from Python code with little latency. Drawbacks include needing to order these chips and wait for them to arrive before testing robots<br>
-										&emsp;&bull;&nbsp;Communicate with the Arduino using serial communication. Benefits include not needing to order additional chips and use the same power source used for previous robots designed in class. Drawbacks include having some latency and dealing with Arduino code
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header" style="color:#000000";>Progress Report: 10/23-10/27</div>
-								<div class="collapsible-body" style="margin-top: -3em; margin-bottom: -3em">
-									<p>Filled out order forms for 1 robot. Once those parts arrive, I will be able to construct 1 robot. If that robot works well and all the parts work without any problems, I can order the remaining parts.<br>Remaining parts list<br>&emsp;&bull;&nbsp;2 slip rings for 18+ wires (need to fill out order form)<br>&emsp;&bull;&nbsp;4 Raspberry Pi cameras (still waiting for them to arrive)<br>&emsp;&bull;&nbsp;2 Raspberry Pi camera multiplexers  (need to fill out order form)<br>&emsp;&bull;&nbsp;Better wheels for robots?<br>Once the parts arrive, I will be able to construct 1 robot. If that robot works well and all the parts work without any problems, I can order the remaining parts.
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header" style="color:#000000;">Progress Report: 10/16-10/20</div>
-								<div class="collapsible-body" style="margin-top: -3em; margin-bottom: -3em">
-									<p>Presented proposal to rest of the class. Got feedback on project (i.e ideas for localization, worrying about cameras scanning other robots)<br>Remaining parts list<br>&emsp;&bull;&nbsp;3 slip rings for 18+ wires (need to fill out order form)<br>&emsp;&bull;&nbsp;6 Raspberry Pi cameras (still waiting for them to arrive)<br>&emsp;&bull;&nbsp;2 Raspberry Pi camera multiplexers  (need to fill out order form)<br>&emsp;&bull;&nbsp;Better wheels for robots?<br>Next steps are to submit remaining order forms. Once the parts arrive, I can measure them more accurately and adjust my CAD drawings.
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header" style="color:#000000;">Progress Report: 10/9-10/13</div>
-								<div class="collapsible-body" style="margin-top: -3em; margin-bottom: -3em">
-									<p>I started CADing out the initial designs for the swarm robots. I also finished the project proposal. As specified in my project proposal, I want to use a 2-wheel drive system so I will need to figure out whether I want stronger motors or stick to servos, and whether the servos we currently have in the Robotics Lab are strong enough to move the robot without wheel slippage. <br>Remaining parts list<br>&emsp;&bull;&nbsp;3 slip rings for 18+ wires (need to fill out order form)<br>&emsp;&bull;&nbsp;6 Raspberry Pi cameras (still waiting for them to arrive)<br>&emsp;&bull;&nbsp;2 Raspberry Pi camera multiplexers  (need to fill out order form)<br>&emsp;&bull;&nbsp;Better wheels for robots?<br>After CADing out the initial designs, I will try to cut them on the laser cutter and then see if the initial components (Raspberry Pi, external battery, breadboard, servos) all fit on the board. Then I can look into issues with weight and see if I need more powerful motors/better servos.
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header" style="color:#000000;">Progress Report: 10/2-10/6</div>
-								<div class="collapsible-body" style="margin-top: -3em; margin-bottom: -3em">
-									<p>I finally finished working on the design of the website, and now the only thing remaining to do is actually fill in the content for the website.<br>I received the new portable batteries and was able to confirm that they work perfectly with the Raspberry Pi. The only issue is that the portable batteries are pretty large and semi-circular so I may have to compensate for this in my design of the swarm robots.<br>Remaining parts list<br>&emsp;&bull;&nbsp;3 slip rings for 18+ wires<br>&emsp;&bull;&nbsp;6 Raspberry Pi cameras (Talked with Dr. Torbert this week about ordering the camera, and he told me that he placed the order so I am now waiting for them to arrive)<br>&emsp;&bull;&nbsp;2 Raspberry Pi camera multiplexers<br>&emsp;&bull;&nbsp;Better wheels for robots?<br>Plan for next week is to start working on the design of the swarm robots and CAD everything out. I also need to fill in the content of the website. I also need to place the orders for all the remaining parts (i.e multiplexers, slip rings)
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header" style="color:#000000;">Progress Report: 9/25-9/29</div>
-								<div class="collapsible-body" style="margin-top: -3em; margin-bottom: -3em">
-									<p>Continued working on the website. I opted for a website design using a navbar that would always stay at the top of the page and have the navbar be able to link to all the different sections on the website. This seems to be a good design because it offers ease of access to the people who visit the website. I also set up the DNS settings on the Namecheap Web Hosting Service so that anybody can access the website at one link.<br>I also returned the portable battery packs and ordered new ones with a much higher current rating (1A -> 2.1A) so now I can actually turn on the Raspberry Pis<br>Remaining parts list<br>&emsp;&bull;&nbsp;3 slip rings for 18+ wires<br>&emsp;&bull;&nbsp;6 Raspberry Pi cameras<br>&emsp;&bull;&nbsp;2 Raspberry Pi camera multiplexers<br>&emsp;&bull;&nbsp;Better wheels for robots?<br>Plan for next week is to continue working on the website and test out the new battery packs once they arrive.
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header" style="color:#000000;">Progress Report: 9/18-9/22</div>
-								<div class="collapsible-body" style="margin-top: -3em; margin-bottom: -3em">
-									<p>Setup heroku+django backend for project website. The discussion and blog posts will be dynamic so I will need to develop the backend using heroku+django. I also used the materialize css libraries to develop my website.<br>Ordered the 3 portable battery packs for the Raspberry Pi but found out that they don't provide enough current for the Raspberry Pi to function properly.<br>Remaining parts list<br>&emsp;&bull;&nbsp;3 slip rings for 18+ wires<br>&emsp;&bull;&nbsp;6 Raspberry Pi cameras<br>&emsp;&bull;&nbsp;2 Raspberry Pi camera multiplexers<br>&emsp;&bull;&nbsp;Better wheels for robots?<br>Plan for next week is to continue working on the website and return the 3 portable battery packs.
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header" style="color:#000000;">Progress Report: 9/11-9/15</div>
-								<div class="collapsible-body" style="margin-top: -3em; margin-bottom: -3em">
-									<p>Collected 3 portable battery packs that can be used to power Raspberry Pis<br>Installed all the appropriate software on 1 of the Raspberry Pis<br>Remaining parts list<br>&emsp;&bull;&nbsp;3 slip rings for 18+ wires (https://www.amazon.com/Logisaf-Compact-Capsule-Circuits-Equipment/dp/B01KA41SV0/)<br>&emsp;&bull;&nbsp;6 Raspberry Pi cameras<br>&emsp;&bull;&nbsp;2 Raspberry Pi camera multiplexers<br>&emsp;&bull;&nbsp;Better wheels for robots?
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header" style="color:#000000;">Progress Report: 9/4-9/8</div>
-								<div class="collapsible-body" style="margin-top: -3em; margin-bottom: -3em">
-									<p>Submitted and discussed pre proposals in classroom<br>Collected 3 Raspberry Pis from my house for use in the project, along with an old router for WiFi communication<br>Started researching for ROS packages that would allow me to run SLAM algorithms on a 3D map derived from stereo cameras<br>&emsp;&bull;&nbsp;stereo_slam (http://wiki.ros.org/stereo_slam)<br>&emsp;&bull;&nbsp;viso2 (http://wiki.ros.org/viso2_ros)<br>Remaining parts list<br>&emsp;&bull;&nbsp;3 slip rings for 18+ wires (https://www.amazon.com/Logisaf-Compact-Capsule-Circuits-Equipment/dp/B01KA41SV0/)<br>&emsp;&bull;&nbsp;6 Raspberry Pi cameras<br>&emsp;&bull;&nbsp;2 Raspberry Pi camera multiplexers<br>&emsp;&bull;&nbsp;3 portable battery packs for the Raspberry Pi<br>&emsp;&bull;&nbsp;Better wheels for robots?
-									</p>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+            	<div id="components" class="section scrollspy" style="margin-top: 2em; margin-right: 2em">
+            		<h2 class="header indigo-text lighten-1 section-title">
+            			<span>Components</span>
+            		</h2>
 
-		<div class="v valign-wrapper section" >
-			<div class="dv">
-				<div class="c">
-					<div class="d iv"><h2 class="section-title">Discussion</h2></div>
-					<div class="container">
-						<div id="disqus_thread"></div>
-						<script>
+            		
+            		<div class="collection" style="margin-top: 2em; margin-bottom: -1em">
+            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Arducam Multi Camera Module (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$149.97</a></div></ul>
+            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi Camera Module V2 (x6)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$149.94</a></div></ul>
+            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$89.85</a></div></ul>
+            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Logisaf 24 Circuit Slip Ring (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$74.97</a></div></ul>
+            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Aibocn Mini Power Bank (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$29.99</a></div></ul>
+            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi Flex Cable 4" (x6)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$11.70</a></div></ul>
+            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">TE Connectivity AMP Connector BOTTOM (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$6.96</a></div></ul>
+            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">TE Connectivity AMP Connector TOP (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$2.61</a></div></ul>							
+            		</div>
+
+            	</div>
+
+            	<div id="code" class="section scrollspy" style="margin-top: 2em; margin-right: 2em">
+            		<h2 class="header indigo-text lighten-1 section-title" style="margin-bottom: 1em;" >
+            			<span>Code</span>
+            		</h2>
+
+            		<script src="http://gist-it.appspot.com/https://github.com/Alaska47/seniorresearch/blob/master/seniorresearch/views.py"></script>
+
+            	</div>
+
+
+
+            	<div id="logs" class="section scrollspy" style="margin-right: 2em">
+            		<h2 class="header indigo-text lighten-1 section-title">
+            			<span>Logs</span>
+            		</h2>
+
+
+            		<div class="" style="margin-top: 2em; margin-bottom: -1em">
+            			<div class="row">
+            				{% for log in logs %}
+            				<a class="modal-trigger" onclick='disableScroll();' href="#{{ log.modal }}">
+            					<div class="col s6 m4 waves-effect waves-block waves-light">
+            						<div class="card-panel teal">
+            							<span class="center white-text" style="font-size: 20px">
+            								{{ log.title }}
+            							</span>
+            						</div>
+            					</div>
+            				</a>
+            				<div tabindex="-1" id="{{ log.modal }}" class="modal modal-fixed-footer">
+            					<div class="modal-content">
+            						<h4>{{ log.title }}</h4>
+            						<p style="font-size: 10px">{{ log.created_date }}</p>
+            						
+            						{% autoescape off %}{{ log.text}}{% endautoescape %} 
+            					</div>
+            					<div class="modal-footer">
+            						<a href="javascript:;" class="modal-action modal-close waves-effect waves-green btn-flat ">OK</a>
+            					</div>
+            				</div>
+            				{% endfor %}
+            				<!--
+            				<a class="modal-trigger" onclick='disableScroll();' href="#modal1">
+            					<div class="col s6 m4 waves-effect waves-block waves-light">
+            						<div class="card-panel teal">
+            							<span class="center white-text" style="font-size: 24px">
+            								Progress Report: 9/4-9/8
+            							</span>
+            						</div>
+            					</div>
+            				</a>
+            				<div id="modal1" class="modal modal-fixed-footer">
+            					<div class="modal-content">
+            						<h4>Progress Report: 9/4-9/8</h4>
+            						<p>A bunch of text</p>
+            					</div>
+            					<div class="modal-footer">
+            						<a href="javascript:;" class="modal-action modal-close waves-effect waves-green btn-flat ">OK</a>
+            					</div>
+            				</div>-->
+
+            			</div>
+            		</div>
+            	</div>
+
+            	<div id="gallery" class="section scrollspy" style="margin-right: 2em">
+            		<h2 class="header indigo-text lighten-1 section-title">
+            			<span>Gallery</span>
+            		</h2>
+
+            		<div class="slider" style="margin-top: 2em; margin-bottom: 1em">
+            			<ul class="slides">
+            				<li>
+            					<img src="http://cdn.wonderfulengineering.com/wp-content/uploads/2014/03/high-resolution-wallpapers-25.jpg"> <!-- random image -->
+            					<div class="caption center-align">
+            						<h3>This is our big Tagline!</h3>
+            						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            					</div>
+            				</li>
+            				<li>
+            					<img src="http://www.qygjxz.com/data/out/109/4447677-high-resolution-pictures.jpeg"> <!-- random image -->
+            					<div class="caption left-align">
+            						<h3>Left Aligned Caption</h3>
+            						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            					</div>
+            				</li>
+            				<li>
+            					<img src="http://ahdzbook.com/data/out/109/hdwp695644424.jpg"> <!-- random image -->
+            					<div class="caption right-align">
+            						<h3>Right Aligned Caption</h3>
+            						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            					</div>
+            				</li>
+            				<li>
+            					<img src="https://livewallpaper.info/wp-content/uploads/2016/11/wallpapers-High-Resolution-Download7.jpg"> <!-- random image -->
+            					<div class="caption center-align">
+            						<h3>This is our big Tagline!</h3>
+            						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            					</div>
+            				</li>
+            			</ul>
+            		</div>
+
+            	</div>
+
+            	<div id="discussion" class="section scrollspy" style="margin-right: 2em">
+            		<h2 class="header indigo-text lighten-1 section-title">
+            			<span>Discussion</span>
+            		</h2>
+
+            		<div id="disqus_thread"></div>
+            		<script>
 
 							/**
 							*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -214,73 +232,23 @@
 						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 					</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="v valign-wrapper section" >
-			<div class="dv">
-				<div class="c">
-					<div class="d iv"><h2 class="section-title">Gallery</h2>
-						<div class="">
-							<div class="slider">
-								<ul class="slides">
-									<li>
-										<img src="http://cdn.wonderfulengineering.com/wp-content/uploads/2014/03/high-resolution-wallpapers-25.jpg"> <!-- random image -->
-										<div class="caption center-align">
-											<h3>This is our big Tagline!</h3>
-											<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-										</div>
-									</li>
-									<li>
-										<img src="http://www.qygjxz.com/data/out/109/4447677-high-resolution-pictures.jpeg"> <!-- random image -->
-										<div class="caption left-align">
-											<h3>Left Aligned Caption</h3>
-											<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-										</div>
-									</li>
-									<li>
-										<img src="http://ahdzbook.com/data/out/109/hdwp695644424.jpg"> <!-- random image -->
-										<div class="caption right-align">
-											<h3>Right Aligned Caption</h3>
-											<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-										</div>
-									</li>
-									<li>
-										<img src="https://livewallpaper.info/wp-content/uploads/2016/11/wallpapers-High-Resolution-Download7.jpg"> <!-- random image -->
-										<div class="caption center-align">
-											<h3>This is our big Tagline!</h3>
-											<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
+				</div>
+			</main>
+			<footer class="page-footer indigo">
+				<div class="footer-copyright">
+					<div class="container">
+						Made by Aneesh Kotnana
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
+			</footer>
+			<!--  Scripts-->
+			<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+			<script src="{% static 'js/progressbar.min.js' %}"></script>
+			<script src="{% static 'js/materialize.js' %}"></script>
+			<script src="{% static 'js/init.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+			<script id="dsq-count-scr" src="//robo-akotnana-com.disqus.com/count.js" async></script>
+		</body>
+		</html>
 
-<!--
-<footer class="page-footer">
-	<div class="footer-copyright">
-		<div class="container">
-			Made by <a class="text-lighten-3" href="http://materializecss.com">Materialize</a>
-		</div>
-	</div>
-</footer>
--->
-
-
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-<script src="{% static 'js/startup-all-min.js' %}"></script>
-<script src="{% static 'js/jquery.fullPage.min.js' %}"></script>
-<script src="{% static 'js/jquery.slimscroll.min.js' %}"></script>
-<script src="{% static 'js/materialize.js' %}"></script>
-<script src="{% static 'js/init.js' %}"></script>
-<script id="dsq-count-scr" src="//robo-akotnana-com.disqus.com/count.js" async></script>
-</body>
-</html>
