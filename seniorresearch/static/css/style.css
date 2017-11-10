@@ -35,6 +35,12 @@ header {
   left: 10px;
 }
 
+html.noscroll {
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+}
+
 header img {
     max-height: 160px;
 }
@@ -2463,7 +2469,7 @@ ul.browser-default li {
 .table-of-contents a.active {
     font-weight: 500;
     padding-left: 18px;
-    border-left: 2px solid #ee6e73
+    border-left: 4px solid #ee6e73
 }
 
 .card {

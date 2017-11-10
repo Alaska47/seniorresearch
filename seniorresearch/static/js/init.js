@@ -4,36 +4,62 @@
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
 function preventDefault(e) {
-  
+
   e = e || window.event;
   if (e.preventDefault)
-      e.preventDefault();
+    e.preventDefault();
   e.returnValue = false;  
 }
 
 function preventDefaultForScrollKeys(e) {
-    if (keys[e.keyCode]) {
-        preventDefault(e);
-        return false;
-    }
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+function disableScrollbar() {
+  if ($(document).height() > $(window).height()) {
+   var scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop(); // Works for Chrome, Firefox, IE...
+   $('html').addClass('noscroll').css('top',-scrollTop);         
+ }
+}
+
+function enableScrollbar() {
+  var scrollTop = parseInt($('html').css('top'));
+  $('html').removeClass('noscroll');
+  $('html,body').scrollTop(-scrollTop);
 }
 
 function disableScroll() {
   if (window.addEventListener) // older FF
-      window.addEventListener('DOMMouseScroll', preventDefault, false);
+    window.addEventListener('DOMMouseScroll', preventDefault, false);
   window.onwheel = preventDefault; // modern standard
   window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
   window.ontouchmove  = preventDefault; // mobile
   document.onkeydown  = preventDefaultForScrollKeys;
 }
 
+$.fn.disableScroll = function() {
+  window.oldScrollPos = $(window).scrollTop();
+
+  $(window).on('scroll.scrolldisabler',function ( event ) {
+   $(window).scrollTop( window.oldScrollPos );
+   event.preventDefault();
+ });
+};
+
+$.fn.enableScroll = function() {
+  $(window).off('scroll.scrolldisabler');
+};
+
 function enableScroll() {
-    if (window.removeEventListener)
-        window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.onmousewheel = document.onmousewheel = null; 
-    window.onwheel = null; 
-    window.ontouchmove = null;  
-    document.onkeydown = null;  
+  if (window.removeEventListener)
+    window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.onmousewheel = document.onmousewheel = null; 
+  window.onwheel = null; 
+  window.ontouchmove = null;  
+  document.onkeydown = null;  
 }
 
 $(document).ready(function(){
@@ -46,13 +72,23 @@ $(document).ready(function(){
         //console.log(modal, trigger);
         //$('body.test').attr('id', 'darkBackground');
         var div = document.getElementById('overlay-back');
+        //$("#hello").disableScroll();
         console.log((document.documentElement.scrollTop || document.body.scrollTop).toString() + "px")
         div.style.top = (document.documentElement.scrollTop || document.body.scrollTop).toString() + "px";
         $('#overlay-back').fadeIn(250);
+
+        ////
       },
       complete: function() { //$('body.test').attr('id', 'lightBackground'); 
       $('#overlay-back').fadeOut(250);
-      enableScroll();
+      //$("#hello").enableScroll();
+      ////
+
+
+      enableScrollbar();
+
+      ////
+      //enableScroll();
       } // Callback for Modal close // Opacity of modal background
     });
 

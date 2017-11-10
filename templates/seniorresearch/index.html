@@ -12,7 +12,7 @@
 	<link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href="{% static 'images/favicon.ico' %}" rel="icon" type="image/x-icon" />
 </head>
-<body class="test">
+<body class="test" id="hello">
 
 	<div id="overlay-back"></div> 
 	<header class="header banner indigo z-depth-1">
@@ -120,9 +120,9 @@
             		<div class="" style="margin-top: 2em; margin-bottom: -1em">
             			<div class="row">
             				{% for log in logs %}
-            				<a class="modal-trigger" onclick='disableScroll();' href="#{{ log.modal }}">
+            				<a class="modal-trigger" onclick='disableScrollbar();' href="#{{ log.modal }}">
             					<div class="col s6 m4 waves-effect waves-block waves-light">
-            						<div class="card-panel teal">
+            						<div class="card-panel indigo">
             							<span class="center white-text" style="font-size: 20px">
             								{{ log.title }}
             							</span>
