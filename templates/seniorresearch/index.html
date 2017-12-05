@@ -40,107 +40,110 @@
                         </div>
                     </div>
                 </div>
-            -->
-            <div class="toc-wrapper">
-            	<div style="height: 1px;">
-            		<ul class="section table-of-contents">
-            			<li><a href="#description">Description</a></li>
-            			<li><a href="#details">Details</a></li>
-            			<li><a href="#components">Components</a></li>
-            			<li><a href="#code">Code</a></li>
-            			<li><a href="#logs">Logs</a></li>
-            			<li><a href="#gallery">Gallery</a></li>
-            			<li><a href="#discussion">Discussion</a></li>
-            		</ul>
-            	</div>
+          -->
+          <div class="toc-wrapper">
+           <div style="height: 1px;">
+                <ul class="section table-of-contents">
+                     <li><a href="#description">Description</a></li>
+                     <li><a href="#details">Details</a></li>
+                     <li><a href="#components">Components</a></li>
+                     <li><a href="#code">Code</a></li>
+                     <li><a href="#logs">Logs</a></li>
+                     <li><a href="#gallery">Gallery</a></li>
+                     <li><a href="#discussion">Discussion</a></li>
+               </ul>
+         </div>
+   </div>
+
+   <div class="col s12 m9 offset-m3 l10 offset-l2">
+     <div id="description" class="section scrollspy" style="margin-right: 2em">
+          <h2 class="header indigo-text lighten-1 section-title">
+               <span>Description</span>
+         </h2>
+         <p class="flow-text">
+               &emsp;Automated area mapping has been a subject of intense robotic research for years, given its real-world applications in problems such as robotic search-and-rescue and exploration of areas unsafe for humans. Currently, much research has been conducted on 2D and 3D area mapping in single robot systems, but one area specifically that has not been researched much is the use of multiple robots in the automated 3D mapping problem - a swarm robotics approach.
+         </p>
+         <p class="flow-text">
+               &emsp;For my project, I will create three small, mobile swarm robots and equip them with stereo vision cameras, with Raspberry Pis serving as the secondary control system and managing and processing the output from the cameras. Communication with the Raspberry Pis will be established using a local area network (LAN) created from a router. A central processing system will aggregate all the data from the Raspberry Pis. Ultimately, the goal is to create software that will efficiently navigate the robots through an area and map a 3D field representation of the area.
+         </p>
+   </div>
+
+
+
+   <div id="details" class="section scrollspy" style="margin-right: 2em">
+
+    <h2 class="header indigo-text lighten-1 section-title">
+         <span>Details</span>
+   </h2>
+
+   <h5 class="header indigo-text darken-3 center" style="font-size: 24px;">Initial sketches</h5>
+   <img class="container materialboxed" src="{% static 'images/initialSketches.png' %}" alt="">
+</div>
+
+
+<div id="components" class="section scrollspy" style="margin-top: 2em; margin-right: 2em">
+    <h2 class="header indigo-text lighten-1 section-title">
+         <span>Components</span>
+   </h2>
+
+
+   <div class="collection" style="margin-top: 2em; margin-bottom: -1em">
+         <ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Arducam Multi Camera Module (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$149.97</a></div></ul>
+         <ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi Camera Module V2 (x6)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$149.94</a></div></ul>
+         <ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$89.85</a></div></ul>
+         <ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Logisaf 24 Circuit Slip Ring (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$74.97</a></div></ul>
+         <ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Aibocn Mini Power Bank (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$29.99</a></div></ul>
+         <ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi Flex Cable 4" (x6)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$11.70</a></div></ul>
+         <ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">TE Connectivity AMP Connector BOTTOM (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$6.96</a></div></ul>
+         <ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">TE Connectivity AMP Connector TOP (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$2.61</a></div></ul>							
+   </div>
+
+</div>
+
+<div id="code" class="section scrollspy" style="margin-top: 2em; margin-right: 2em">
+    <h2 class="header indigo-text lighten-1 section-title" style="margin-bottom: 1em;" >
+         <span>Code</span>
+   </h2>
+
+   <script src="http://gist-it.appspot.com/https://github.com/Alaska47/seniorresearch/blob/master/seniorresearch/views.py"></script>
+
+   <script src="http://gist-it.appspot.com/https://github.com/Alaska47/seniorresearch/blob/master/seniorresearch/urls.py"></script>
+
+</div>
+
+
+
+
+<div id="logs" class="section scrollspy" style="margin-right: 2em">
+    <h2 class="header indigo-text lighten-1 section-title">
+         <span>Logs</span>
+   </h2>
+
+
+   <div class="" style="margin-top: 2em; margin-bottom: -1em">
+         <div class="row">
+              {% for log in logs %}
+              <a class="modal-trigger" onclick='disableScrollbar();' href="#{{ log.modal }}">
+                   <div class="col s6 m4 waves-effect waves-block waves-light">
+                        <div class="card-panel indigo">
+                             <span class="center white-text" style="font-size: 20px">
+                                  {{ log.title }}
+                            </span>
+                      </div>
+                </div>
+          </a>
+          <div tabindex="-1" id="{{ log.modal }}" class="modal modal-fixed-footer">
+             <div class="modal-content">
+                  <h4>{{ log.title }}</h4>
+                  <p style="font-size: 10px">{{ log.created_date }}</p>
+
+                  {% autoescape off %}{{ log.text}}{% endautoescape %} 
             </div>
-
-            <div class="col s12 m9 offset-m3 l10 offset-l2">
-            	<div id="description" class="section scrollspy" style="margin-right: 2em">
-            		<h2 class="header indigo-text lighten-1 section-title">
-            			<span>Description</span>
-            		</h2>
-            		<p class="flow-text">
-            			&emsp;Automated area mapping has been a subject of intense robotic research for years, given its real-world applications in problems such as robotic search-and-rescue and exploration of areas unsafe for humans. Currently, much research has been conducted on 2D and 3D area mapping in single robot systems, but one area specifically that has not been researched much is the use of multiple robots in the automated 3D mapping problem - a swarm robotics approach.
-            		</p>
-            		<p class="flow-text">
-            			&emsp;For my project, I will create three small, mobile swarm robots and equip them with stereo vision cameras, with Raspberry Pis serving as the secondary control system and managing and processing the output from the cameras. Communication with the Raspberry Pis will be established using a local area network (LAN) created from a router. A central processing system will aggregate all the data from the Raspberry Pis. Ultimately, the goal is to create software that will efficiently navigate the robots through an area and map a 3D field representation of the area.
-            		</p>
-            	</div>
-
-
-
-            	<div id="details" class="section scrollspy" style="margin-right: 2em">
-
-            		<h2 class="header indigo-text lighten-1 section-title">
-            			<span>Details</span>
-            		</h2>
-
-            		<h5 class="header indigo-text darken-3 center" style="font-size: 24px;">Initial sketches</h5>
-            		<img class="container materialboxed" src="{% static 'images/initialSketches.png' %}" alt="">
-            	</div>
-
-
-            	<div id="components" class="section scrollspy" style="margin-top: 2em; margin-right: 2em">
-            		<h2 class="header indigo-text lighten-1 section-title">
-            			<span>Components</span>
-            		</h2>
-
-            		
-            		<div class="collection" style="margin-top: 2em; margin-bottom: -1em">
-            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Arducam Multi Camera Module (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$149.97</a></div></ul>
-            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi Camera Module V2 (x6)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$149.94</a></div></ul>
-            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$89.85</a></div></ul>
-            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Logisaf 24 Circuit Slip Ring (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$74.97</a></div></ul>
-            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Aibocn Mini Power Bank (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$29.99</a></div></ul>
-            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">Raspberry Pi Flex Cable 4" (x6)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$11.70</a></div></ul>
-            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">TE Connectivity AMP Connector BOTTOM (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$6.96</a></div></ul>
-            			<ul class="collection-item flow-text"><div style="color:#000000; font-size: 16px;">TE Connectivity AMP Connector TOP (x3)<a target="_blank" href="https://fcps.tjhsst.edu/coursemgmt/courses/300/" class="secondary-content">$2.61</a></div></ul>							
-            		</div>
-
-            	</div>
-
-            	<div id="code" class="section scrollspy" style="margin-top: 2em; margin-right: 2em">
-            		<h2 class="header indigo-text lighten-1 section-title" style="margin-bottom: 1em;" >
-            			<span>Code</span>
-            		</h2>
-
-            		<script src="http://gist-it.appspot.com/https://github.com/Alaska47/seniorresearch/blob/master/seniorresearch/views.py"></script>
-
-            	</div>
-
-
-
-            	<div id="logs" class="section scrollspy" style="margin-right: 2em">
-            		<h2 class="header indigo-text lighten-1 section-title">
-            			<span>Logs</span>
-            		</h2>
-
-
-            		<div class="" style="margin-top: 2em; margin-bottom: -1em">
-            			<div class="row">
-            				{% for log in logs %}
-            				<a class="modal-trigger" onclick='disableScrollbar();' href="#{{ log.modal }}">
-            					<div class="col s6 m4 waves-effect waves-block waves-light">
-            						<div class="card-panel indigo">
-            							<span class="center white-text" style="font-size: 20px">
-            								{{ log.title }}
-            							</span>
-            						</div>
-            					</div>
-            				</a>
-            				<div tabindex="-1" id="{{ log.modal }}" class="modal modal-fixed-footer">
-            					<div class="modal-content">
-            						<h4>{{ log.title }}</h4>
-            						<p style="font-size: 10px">{{ log.created_date }}</p>
-            						
-            						{% autoescape off %}{{ log.text}}{% endautoescape %} 
-            					</div>
-            					<div class="modal-footer">
-            						<a href="javascript:;" class="modal-action modal-close waves-effect waves-green btn-flat ">OK</a>
-            					</div>
-            				</div>
-            				{% endfor %}
+            <div class="modal-footer">
+                  <a href="javascript:;" class="modal-action modal-close waves-effect waves-green btn-flat ">OK</a>
+            </div>
+      </div>
+      {% endfor %}
             				<!--
             				<a class="modal-trigger" onclick='disableScroll();' href="#modal1">
             					<div class="col s6 m4 waves-effect waves-block waves-light">

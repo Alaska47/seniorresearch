@@ -94,3 +94,39 @@ Food for thought: How can I control stepper motors, dc motors, and servos with s
  - Utilize H-bridges and other driver chips. Benefits include being able to communicate with motors directly from Python code with little latency. Drawbacks include needing to order these chips and wait for them to arrive before testing robots
  - Communicate with the Arduino using serial communication. Benefits include not needing to order additional chips and use the same power source used for previous robots designed in class. Drawbacks include having some latency and dealing with Arduino code
 Tuesday, November 7, 2017 11:41:38 AM
+~~~
+Progress Report: 11/8-11/10
+I completely redesigned the website from the ground up. The new website is more accessible and allows for users to browse the page regardless of order and without restriction. The progress reports are also dynamically loaded so that requires less manual work from me. I also submitted a purchase order for new multiplexers because the old ones were incompatible with the cameras I ordered.***
+Remaining parts list***
+ - 3 slip rings for 18+ wires (still waiting for one of them to arrive)***
+ - 3 Raspberry Pi V2 camera multiplexers  (still waiting for them to arrive)***
+ - Better wheels for robots?***
+Now that the Raspberry Pi cameras are here, I can adjust my CAD drawings and start designed the camera interface that rests on top of the robot.
+Monday, November 13, 2017 11:39:48 AM
+~~~
+Progress Report: 11/13-11/17
+Did some under-the-hood improvements to the website to make sure it loaded faster. I also modified my CAD drawings to open up space for an Arduino because I will need one to drive the servos/dc motors on the robots.***
+Remaining parts list***
+ - 3 slip rings for 18+ wires (still waiting for one of them to arrive)***
+ - 3 Raspberry Pi V2 camera multiplexers  (still waiting for them to arrive)***
+ - Better wheels for robots?***
+I intend on improving my CAD drawing and hopefully, the rest of the parts will arrive.
+Tuesday, November 28, 2017 12:13:03 AM
+~~~
+Progress Report: 11/20-11/22
+Continued working on CAD drawings for all sides of the robots.***
+Remaining parts list***
+ - 3 slip rings for 18+ wires (still waiting for one of them to arrive)***
+ - 3 Raspberry Pi V2 camera multiplexers  (still waiting for them to arrive)***
+ - Better wheels for robots?***
+I need to still conduct accurate measurements of the cameras and multiplexers so that the case I design for them will be secure
+Tuesday, November 28, 2017 12:14:33 AM
+~~~
+Progress Report: 11/27-12/1
+Continued working on CAD drawings for all sides of the robots. I additionally worked on updating progress reports on the website. It looks like Amazon part orders came in, so I will be looking for one of my slip rings.***
+Remaining parts list***
+ - 3 slip rings for 18+ wires (still waiting for one of them to arrive)***
+ - 3 Raspberry Pi V2 camera multiplexers  (still waiting for them to arrive)***
+ - Better wheels for robots?***
+Once I receive the slip ring, as well as the parts from Adafruit, I can conduct tests for the viability of the solution seen in this blog post: [http://adv-geo-research.blogspot.com/2015/05/raspberry-pi-camera-extension-cable.html](http://adv-geo-research.blogspot.com/2015/05/raspberry-pi-camera-extension-cable.html)
+Sunday, December 3, 2017 11:59:09 PM
